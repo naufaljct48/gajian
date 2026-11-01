@@ -8,6 +8,7 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/gajian"><img src="https://img.shields.io/npm/v/gajian?style=flat-square&color=E5322D&label=npm" alt="npm version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0B1B3A?style=flat-square" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/tests-248%20passing-2EA44F?style=flat-square" alt="248 tests passing">
   <img src="https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript strict">
@@ -25,8 +26,6 @@
   <a href="#-bahasa-indonesia">Bahasa Indonesia</a>
 </p>
 
-> [!NOTE]
-> Not on npm yet. Until it is, install from this repo (`git clone`, `npm install`, `npm run build`).
 
 ## 🤔 Why
 
