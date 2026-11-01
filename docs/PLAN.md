@@ -8,7 +8,7 @@ Status: [ ] todo · [x] accepted. Spec: `docs/SPEC.md`.
 
 3. [x] **Core calculations** (careful). `ptkp.ts`, `ter.ts`, `annual.ts`, `bpjs.ts`, `payslip.ts` per SPEC public API, integer rupiah, `breakdown` on every result. Tests: every TER boundary (just below / at / just above), all 8 PTKP statuses, December reconciliation incl. a refund (lebih bayar) case, BPJS caps before/after a JP cap change, Kesehatan floor. Verify: `npm test`, `npm run typecheck`. Depends: 2.
 
-4. [ ] **MCP server** (medium). `packages/gajian-mcp/src/server.ts` stdio server, tools per SPEC with zod input schemas and descriptions written for agents, `bin: gajian-mcp`. Smoke test spawning the server and calling `tools/list` + `payslip`. Depends: 3.
+4. [x] **MCP server** (medium). `packages/gajian-mcp/src/server.ts` stdio server, tools per SPEC with zod input schemas and descriptions written for agents, `bin: gajian-mcp`. Smoke test spawning the server and calling `tools/list` + `payslip`. Depends: 3.
 
 5. [x] **Agent Skill** (medium). `skills/gajian/SKILL.md`: when to use, never compute TER from memory, how to call via MCP or via `npx`/library, how to explain a result using `breakdown`, worked examples. Depends: 3.
 

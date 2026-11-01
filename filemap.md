@@ -33,5 +33,5 @@
 - `packages/gajian/test/bpjs.test.ts` — JP cap history/override, Kesehatan cap/floor, JKK classes
 - `packages/gajian/test/payslip.test.ts` — full payslip example, December guard
 - `packages/gajian/test/validation.test.ts` — input validation errors
-- `packages/gajian-mcp/src/server.ts` — MCP server entry (bin, placeholder)
-- `packages/gajian-mcp/test/server.test.ts` — MCP placeholder test
+- `packages/gajian-mcp/src/server.ts` — stdio MCP server (bin `gajian-mcp`): `createServer()` + tools pph21_monthly, pph21_daily, pph21_december, bpjs_contributions, payslip, list_rules
+- `packages/gajian-mcp/test/server.test.ts` — in-memory client: tools/list, payslip example, isError paths, list_rules; stdio smoke on built dist
