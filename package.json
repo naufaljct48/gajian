@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc -b packages/gajian packages/gajian-mcp",
     "test": "vitest run",
-    "typecheck": "tsc -b packages/gajian packages/gajian-mcp --noEmit"
+    "typecheck": "tsc -b packages/gajian packages/gajian-mcp"
   },
   "devDependencies": {
     "@types/node": "^22",
