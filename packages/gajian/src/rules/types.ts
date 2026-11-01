@@ -3,6 +3,11 @@ export interface Source {
   regulation: string;
   section?: string;
   url?: string;
+  /**
+   * Unset = read from the regulation itself (primary). 'secondary' = the value could not be read
+   * from an official primary document; `section` says where it comes from.
+   */
+  verification?: 'primary' | 'secondary';
 }
 
 /** Every exported rule set carries the date it takes effect and its citation. */

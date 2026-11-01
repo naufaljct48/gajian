@@ -156,6 +156,16 @@ test('JP cap 2015 = Rp7.000.000 (PP 45/2015 Pasal 29 ayat (2)); Kesehatan cap Rp
   for (const k of kesehatan) expect(k).toMatchObject({ employerBp: 400, employeeBp: 100, wageCap: 12_000_000 });
 });
 
+test('JP cap 2024-03 Rp10.042.300 and 2025-03 Rp10.547.400 are marked secondary; no 2026 entry', () => {
+  expect(jpWageCap.map((c) => [c.effectiveFrom, c.cap])).toEqual([
+    ['2015-07-01', 7_000_000],
+    ['2024-03-01', 10_042_300],
+    ['2025-03-01', 10_547_400],
+  ]);
+  expect(jpWageCap.map((c) => c.source.verification)).toEqual([undefined, 'secondary', 'secondary']);
+  expect(jpWageCap[2]!.source.section).toMatch(/bpjsketenagakerjaan\.go\.id\/penerima-upah\.html \(read 2026-11-02\)/);
+});
+
 // Every exported rule set is dated and cited, and no number anywhere in rules/ is a float.
 const ruleSets = Object.values(rules).flatMap((v) => (Array.isArray(v) ? v : [v])) as { effectiveFrom: string; source: { regulation: string } }[];
 

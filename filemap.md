@@ -21,5 +21,16 @@
 - `packages/gajian/src/rules/bpjs.ts` — JHT, JKK, JKM, JP (+ wage cap history), BPJS Kesehatan
 - `packages/gajian/src/rules/index.ts` — rules re-exports (public as `rules`)
 - `packages/gajian/test/rules.test.ts` — rule data integrity + spot checks against PP 58/2023 and PMK 168/2023
+- `packages/gajian/src/util.ts` — internal: input validation, rule lookup by date, basis-point math, Pasal 17 layers, `BreakdownLine`
+- `packages/gajian/src/ptkp.ts` — `getPtkp`, `getTerCategory`
+- `packages/gajian/src/ter.ts` — `pph21Monthly` (TER bulanan), `pph21Daily` (TER harian / Pasal 17 above Rp2.500.000)
+- `packages/gajian/src/annual.ts` — `pph21December` (annual reconciliation, lebih bayar)
+- `packages/gajian/src/bpjs.ts` — `bpjs` (JHT, JKK, JKM, JP, Kesehatan by period)
+- `packages/gajian/src/payslip.ts` — `payslip` (Jan-Nov: BPJS + PPh 21 + take-home)
+- `packages/gajian/test/ter.test.ts` — TER band boundaries, PTKP statuses, PMK 168/2023 Lampiran monthly + daily examples
+- `packages/gajian/test/annual.test.ts` — December reconciliation (Lampiran C example, lebih bayar, rounding)
+- `packages/gajian/test/bpjs.test.ts` — JP cap history/override, Kesehatan cap/floor, JKK classes
+- `packages/gajian/test/payslip.test.ts` — full payslip example, December guard
+- `packages/gajian/test/validation.test.ts` — input validation errors
 - `packages/gajian-mcp/src/server.ts` — MCP server entry (bin, placeholder)
 - `packages/gajian-mcp/test/server.test.ts` — MCP placeholder test

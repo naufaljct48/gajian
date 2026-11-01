@@ -76,15 +76,35 @@ export interface JpWageCap extends Rule {
 /**
  * JP wage cap history, ascending. PP 45/2015 Pasal 29 ayat (3)-(4): BPJS Ketenagakerjaan adjusts it
  * every year by (1 + previous year's GDP growth) and announces it.
- * Only entries confirmed from an official host are listed. Missing (not found on an official host):
- * the 2016-2024 adjustments, the March 2025 cap (Rp10.547.400 per bpjsketenagakerjaan.go.id, effective
- * date not stated there) and any 2026 cap.
+ * The 2024 and 2025 entries come from BPJS Ketenagakerjaan letters as published by secondary sites
+ * (`verification: 'secondary'`). Missing: the 2016-2023 adjustments (periods from 2016-01 to 2024-02
+ * resolve to the 2015 cap) and any 2026 cap.
  */
 export const jpWageCap: readonly JpWageCap[] = [
   {
     effectiveFrom: '2015-07-01',
     source: { ...pp45, section: 'Pasal 29 ayat (2) (hlm. 21)' },
     cap: 7_000_000,
+  },
+  {
+    effectiveFrom: '2024-03-01',
+    source: {
+      regulation: 'BPJS Ketenagakerjaan, JP wage cap 2024',
+      section: 'BPJS Ketenagakerjaan letter as published by secondary sites',
+      verification: 'secondary',
+    },
+    cap: 10_042_300,
+  },
+  {
+    effectiveFrom: '2025-03-01',
+    source: {
+      regulation: 'BPJS Ketenagakerjaan, JP wage cap 2025',
+      section:
+        'BPJS Ketenagakerjaan letter as published by secondary sites; Rp10.547.400 confirmed as current on bpjsketenagakerjaan.go.id/penerima-upah.html (read 2026-11-02)',
+      url: 'https://www.bpjsketenagakerjaan.go.id/penerima-upah.html',
+      verification: 'secondary',
+    },
+    cap: 10_547_400,
   },
 ];
 
