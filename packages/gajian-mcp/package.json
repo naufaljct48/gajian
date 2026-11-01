@@ -1,6 +1,6 @@
 {
   "name": "gajian-mcp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "MCP server for gajian: Indonesian PPh 21 TER, BPJS and payslip calculations as tools for Claude, Cursor and other MCP clients.",
   "keywords": [
     "pph21",
@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
-    "gajian": "*",
+    "gajian": "^0.1.0",
     "zod": "^4.0.0"
   }
 }

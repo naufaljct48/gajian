@@ -1,4 +1,4 @@
-export const VERSION = '0.0.0';
+export const VERSION = '0.1.0';
 export * as rules from './rules/index.js';
 export type { JkkRiskClass, PtkpStatus, TerCategory } from './rules/index.js';
 export type { BreakdownLine } from './util.js';

@@ -1,6 +1,6 @@
 {
   "name": "gajian",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Indonesian payroll math: PPh 21 TER (PP 58/2023), December reconciliation, PTKP and BPJS, with dated rules cited to the regulation.",
   "keywords": [
     "pph21",
