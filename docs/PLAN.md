@@ -10,6 +10,6 @@ Status: [ ] todo · [x] accepted. Spec: `docs/SPEC.md`.
 
 4. [ ] **MCP server** (medium). `packages/gajian-mcp/src/server.ts` stdio server, tools per SPEC with zod input schemas and descriptions written for agents, `bin: gajian-mcp`. Smoke test spawning the server and calling `tools/list` + `payslip`. Depends: 3.
 
-5. [ ] **Agent Skill** (medium). `skills/gajian/SKILL.md`: when to use, never compute TER from memory, how to call via MCP or via `npx`/library, how to explain a result using `breakdown`, worked examples. Depends: 3.
+5. [x] **Agent Skill** (medium). `skills/gajian/SKILL.md`: when to use, never compute TER from memory, how to call via MCP or via `npx`/library, how to explain a result using `breakdown`, worked examples. Depends: 3.
 
 6. [ ] **README + release prep** (medium). README per SPEC DoD, package.json metadata (keywords: pph21, ter, bpjs, payroll, indonesia, mcp, agent-skills), CONTRIBUTING with "how to update rules for a new year". Depends: 4, 5.

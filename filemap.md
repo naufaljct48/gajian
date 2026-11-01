@@ -6,7 +6,8 @@
 - `packages/gajian/` — core library (zero deps)
 - `packages/gajian/src/rules/` — dated, cited rule data (TER, PTKP, Pasal 17, BPJS)
 - `packages/gajian-mcp/` — MCP server over the core
-- `skills/gajian/SKILL.md` — Agent Skill
+- `skills/gajian/SKILL.md` — Agent Skill (when to call gajian, input shapes, defaults to state, worked payslip + December examples)
+- `skills/gajian/README.md` — how to install the skill
 - `package.json` — workspace root, build/test/typecheck scripts
 - `tsconfig.base.json` — shared strict NodeNext compiler options
 - `vitest.config.ts` — runs `packages/*/test/**/*.test.ts`
