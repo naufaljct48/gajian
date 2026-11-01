@@ -13,5 +13,13 @@
 - `LICENSE` — MIT
 - `packages/gajian/src/index.ts` — core public API entry
 - `packages/gajian/test/index.test.ts` — core VERSION test
+- `packages/gajian/src/rules/types.ts` — `Source`, `Rule`, `Band` types for rule data
+- `packages/gajian/src/rules/ter.ts` — TER bulanan A/B/C + TER harian (PP 58/2023 Lampiran)
+- `packages/gajian/src/rules/ptkp.ts` — PTKP amounts (PMK 101/PMK.010/2016) + status → TER category (PP 58/2023)
+- `packages/gajian/src/rules/pasal17.ts` — Pasal 17 ayat (1) huruf a brackets (UU 7/2021 HPP)
+- `packages/gajian/src/rules/biaya-jabatan.ts` — biaya jabatan + employee JHT/JP deductibility (PMK 168/2023)
+- `packages/gajian/src/rules/bpjs.ts` — JHT, JKK, JKM, JP (+ wage cap history), BPJS Kesehatan
+- `packages/gajian/src/rules/index.ts` — rules re-exports (public as `rules`)
+- `packages/gajian/test/rules.test.ts` — rule data integrity + spot checks against PP 58/2023 and PMK 168/2023
 - `packages/gajian-mcp/src/server.ts` — MCP server entry (bin, placeholder)
 - `packages/gajian-mcp/test/server.test.ts` — MCP placeholder test
