@@ -40,10 +40,10 @@ Each rule set is `{ effectiveFrom: 'YYYY-MM-DD', source: { regulation, url? }, .
 
 ### Public API (core)
 - `getPtkp(status, year)`, `getTerCategory(status)`
-- `pph21Monthly({ gross, status, period })` → `{ category, rate, tax }`
+- `pph21Monthly({ gross, status, period })` → `{ category, rateBp, tax }`
 - `pph21Daily({ dailyGross, period })` → TER harian (pegawai tidak tetap, PP 58/2023)
-- `pph21December({ annualGross, annualIuranPensiun, status, year, taxWithheldJanNov })` → full breakdown incl. December tax
-- `bpjs({ wage, period, jkkClass, kesehatanFloor? })` → per program `{ employer, employee, base }`
+- `pph21December({ annualGross, annualEmployeeJhtJp, status, year, taxWithheldJanNov })` → full breakdown incl. December tax
+- `bpjs({ wage, period, jkkClass, kesehatanFloor?, jpWageCap? })` → per program `{ employer, employee, base }`
 - `payslip({ components, status, period, jkkClass })` → breakdown + take-home pay
 Every result includes a `breakdown` array of `{ label, amount, rule }` so agents can explain the number.
 
