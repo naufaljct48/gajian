@@ -1,0 +1,13 @@
+{
+  "name": "gajian-mcp",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "gajian-mcp": "./dist/server.js" },
+  "files": ["dist"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "gajian": "*",
+    "zod": "^4.0.0"
+  }
+}
