@@ -10,7 +10,7 @@ Indonesian payroll math (PPh 21 TER + BPJS) as a typed library, an MCP server, a
 - Easy yearly updates: a rule change = a new dated data entry + tests, not a code rewrite.
 
 ## Non-goals (MVP)
-- UMK/UMP database, holidays (use existing APIs like `kresnasatya/api-harilibur`), NPWP/NIK validation, PPh 21 non-pegawai, severance (pesangon), THR. Candidates for later.
+- UMK/UMP database (planned phase 2: UMP from Kemnaker Satu Data, UMK from SK Gubernur with SK number per row), holidays (use existing APIs like `kresnasatya/api-harilibur`), NPWP/NIK validation, PPh 21 non-pegawai, severance (pesangon), THR. Candidates for later.
 - Any storage of people's data. Pure functions only.
 - No UI.
 
@@ -25,7 +25,7 @@ Indonesian payroll math (PPh 21 TER + BPJS) as a typed library, an MCP server, a
 packages/gajian/src/
   rules/        dated rule data with citations (PTKP, TER A/B/C, Pasal 17 brackets, biaya jabatan, BPJS rates + caps)
   ptkp.ts       PTKP by status (TK/0..K/3), TER category mapping (A/B/C)
-  ter.ts        monthly TER rate lookup + monthly PPh 21 (Jan–Nov)
+  ter.ts        monthly TER rate lookup + monthly PPh 21 (Jan–Nov), daily TER (pegawai tidak tetap)
   annual.ts     December / annual reconciliation (Pasal 17 progressive, biaya jabatan, iuran pensiun deduction)
   bpjs.ts       BPJS Kesehatan, JHT, JP, JKK (5 risk classes), JKM — employer/employee split, caps by date
   payslip.ts    one call: gross components -> BPJS + PPh 21 + take-home pay, with a line-by-line breakdown
@@ -41,6 +41,7 @@ Each rule set is `{ effectiveFrom: 'YYYY-MM-DD', source: { regulation, url? }, .
 ### Public API (core)
 - `getPtkp(status, year)`, `getTerCategory(status)`
 - `pph21Monthly({ gross, status, period })` → `{ category, rate, tax }`
+- `pph21Daily({ dailyGross, period })` → TER harian (pegawai tidak tetap, PP 58/2023)
 - `pph21December({ annualGross, annualIuranPensiun, status, year, taxWithheldJanNov })` → full breakdown incl. December tax
 - `bpjs({ wage, period, jkkClass, kesehatanFloor? })` → per program `{ employer, employee, base }`
 - `payslip({ components, status, period, jkkClass })` → breakdown + take-home pay
