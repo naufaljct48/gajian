@@ -35,3 +35,7 @@
 - `packages/gajian/test/validation.test.ts` — input validation errors
 - `packages/gajian-mcp/src/server.ts` — stdio MCP server (bin `gajian-mcp`): `createServer()` + tools pph21_monthly, pph21_daily, pph21_december, bpjs_contributions, payslip, list_rules
 - `packages/gajian-mcp/test/server.test.ts` — in-memory client: tools/list, payslip example, isError paths, list_rules; stdio smoke on built dist
+- `README.md` — EN + Bahasa Indonesia: why, library/MCP/skill usage, API table, sources table, scope, roadmap
+- `CONTRIBUTING.md` — setup, how to update rules for a new year, commit style
+- `packages/gajian/README.md`, `packages/gajian-mcp/README.md` — short npm package READMEs pointing to the root README
+- `packages/gajian/LICENSE`, `packages/gajian-mcp/LICENSE` — MIT copies shipped in each npm package

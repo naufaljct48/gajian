@@ -1,10 +1,45 @@
 {
   "name": "gajian-mcp",
   "version": "0.0.0",
-  "type": "module",
+  "description": "MCP server for gajian: Indonesian PPh 21 TER, BPJS and payslip calculations as tools for Claude, Cursor and other MCP clients.",
+  "keywords": [
+    "pph21",
+    "pph-21",
+    "ter",
+    "bpjs",
+    "payroll",
+    "gaji",
+    "indonesia",
+    "tax",
+    "mcp",
+    "mcp-server",
+    "agent-skills",
+    "claude"
+  ],
   "license": "MIT",
-  "bin": { "gajian-mcp": "./dist/server.js" },
-  "files": ["dist"],
+  "author": "Naufal Aziz Albaaqie",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naufaljct48/gajian.git",
+    "directory": "packages/gajian-mcp"
+  },
+  "homepage": "https://github.com/naufaljct48/gajian#readme",
+  "bugs": {
+    "url": "https://github.com/naufaljct48/gajian/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": {
+    "gajian-mcp": "./dist/server.js"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
     "gajian": "*",

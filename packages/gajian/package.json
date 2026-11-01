@@ -1,11 +1,47 @@
 {
   "name": "gajian",
   "version": "0.0.0",
-  "type": "module",
+  "description": "Indonesian payroll math: PPh 21 TER (PP 58/2023), December reconciliation, PTKP and BPJS, with dated rules cited to the regulation.",
+  "keywords": [
+    "pph21",
+    "pph-21",
+    "ter",
+    "bpjs",
+    "payroll",
+    "gaji",
+    "indonesia",
+    "tax",
+    "mcp",
+    "mcp-server",
+    "agent-skills",
+    "claude"
+  ],
   "license": "MIT",
+  "author": "Naufal Aziz Albaaqie",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naufaljct48/gajian.git",
+    "directory": "packages/gajian"
+  },
+  "homepage": "https://github.com/naufaljct48/gajian#readme",
+  "bugs": {
+    "url": "https://github.com/naufaljct48/gajian/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
   },
   "types": "./dist/index.d.ts",
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }

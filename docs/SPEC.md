@@ -48,7 +48,7 @@ Each rule set is `{ effectiveFrom: 'YYYY-MM-DD', source: { regulation, url? }, .
 Every result includes a `breakdown` array of `{ label, amount, rule }` so agents can explain the number.
 
 ### MCP tools
-`pph21_monthly`, `pph21_december`, `bpjs_contributions`, `payslip`, `list_rules` (what versions/dates are loaded). Input validated with zod (ships with the MCP SDK). Errors returned as tool errors, never thrown to the client.
+`pph21_monthly`, `pph21_daily`, `pph21_december`, `bpjs_contributions`, `payslip`, `list_rules` (what versions/dates are loaded). Input validated with zod (ships with the MCP SDK). Errors returned as tool errors, never thrown to the client.
 
 ## Sources (primary)
 - PP 58/2023 (TER tables A/B/C, Lampiran) and PMK 168/2023 (procedure, December reconciliation, biaya jabatan).
